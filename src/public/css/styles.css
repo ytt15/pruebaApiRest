@@ -1,6 +1,6 @@
 body {
     background: #f5f6fa;
-font-family: 'Oswald', sans-serif;
+font-family: 'fira sans', sans-serif;
 
     overflow: hidden;
 }
@@ -11,7 +11,7 @@ font-family: 'Oswald', sans-serif;
 }
 
 .navbar {
-    background: black !important;
+    background: rgb(73, 80, 73) !important;
 }
 
 .nav-link {
@@ -30,6 +30,7 @@ font-family: 'Oswald', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 .masthead h1 {
     font-size: 4rem;
