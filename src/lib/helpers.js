@@ -1,19 +1,9 @@
-const bcrypt = require('bcryptjs');
+import bcrypt from "bcryptjs";
 
-const helpers = {};
-
-helpers.encryptPassword = async (password) => {
+export const encryptPassword = async (password) => {
   const salt = await bcrypt.genSalt(10);
-  const hash = await bcrypt.hash(password, salt);
-  return hash;
+  return await bcrypt.hash(password, salt);
 };
 
-helpers.matchPassword = async (password, savedPassword) => {
-  try {
-    return await bcrypt.compare(password, savedPassword);
-  } catch (e) {
-    console.log(e)
-  }
-};
-
-module.exports = helpers;
+export const matchPassword = async (password, savedPassword) =>
+  await bcrypt.compare(password, savedPassword);

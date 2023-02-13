@@ -1,7 +1,12 @@
-/*export const port = process.env.PORT || 3000
+import { config } from "dotenv";
+config();
 
-export const DB_HOST = process.env.DB_HOST || 'localhost'
-export const DB_USER = process.env.DB_USER || 'root'
-export const DB_PASSWORD = process.env.DB_PASSWORD || ''
-export const DB_NAME = process.env.DB_NAME || 'db_links'
-export const DB_PORT = process.env.DB_PORT || '3306'*/
+export const database = {
+  connectionLimit: 10,
+  host: process.env.DATABASE_HOST || "localhost",
+  user: process.env.DATABASE_USER || "root",
+  password: process.env.DATABASE_PASSWORD || "",
+  database: process.env.DATABASE_NAME || "db_links",
+};
+
+export const port = process.env.PORT || 4000;

@@ -1,8 +1,14 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from "express";
+import auth from "./auth.routes.js";
+import index from "./index.routes.js";
+import links from "./links.routes.js";
+import user from "./user.routes.js";
 
-router.get('/', async (req, res) => {
-    res.render('index');
-});
+const router = Router();
 
-module.exports = router;
+router.use(index);
+router.use(auth);
+router.use(user);
+router.use("/links", links);
+
+export default router;

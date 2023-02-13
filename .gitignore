@@ -1,0 +1,7 @@
+node_modules
+
+# environemnt variables
+.env
+
+# dist
+dist

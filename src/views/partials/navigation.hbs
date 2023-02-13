@@ -1,39 +1,63 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <i class="fas fa-link"></i> Links Destacados
+      <i class="fas fa-link"></i>
+      Urls Favoritas
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
         {{#if user}}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-          Links
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/links">Ver todos</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/links/add">Agregar</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/profile">Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/logout">Cerrar Sesión</a>
-        </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              links
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/links">Todas la Urls</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/links/add">Añadir Url</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{user.fullname}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+              <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
+            </ul>
+          </li>
         {{else}}
-        <li class="nav-item">
-          <a class="nav-link" href="/signin">Iniciar Sesión</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/signup">Registrarse</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Registrarme</a>
+          </li>
         {{/if}}
       </ul>
     </div>
