@@ -7,6 +7,7 @@ export const database = {
   user: process.env.DATABASE_USER || "root",
   password: process.env.DATABASE_PASSWORD || "",
   database: process.env.DATABASE_NAME || "db_links",
+  port: process.env.DATABASE_PORT || "3306"
 };
 
 export const port = process.env.PORT || 4000;
