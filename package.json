@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js", 
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "ci": "^2.2.0",
     "connect-flash": "^0.1.1",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
