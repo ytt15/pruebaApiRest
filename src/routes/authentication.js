@@ -45,3 +45,4 @@ router.get('/profile', isLoggedIn, (req, res) => {
 });
 
 module.exports = router;
+
